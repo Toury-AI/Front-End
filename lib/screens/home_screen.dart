@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:toury_app/widgets/bottom_nav_bar.dart';
 import 'package:toury_app/widgets/top_nav_bar.dart';
+import 'package:toury_app/widgets/side_buttons.dart';
 import 'package:toury_app/widgets/drawer.dart';
 
 
@@ -12,9 +13,12 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       drawer: CustomDrawer(),
       body:TopNavBar(),
-      // Add side buttons here later
-      bottomNavigationBar: BottomNavBar(),
+
+      bottomNavigationBar: Padding(padding: const EdgeInsets.only(bottom: 20), 
+      child: BottomNavBar()),
+      
     );
   }
+  
 }
 
