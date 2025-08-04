@@ -12,8 +12,16 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: CustomDrawer(),
-      body:TopNavBar(),
-
+      body: Stack(
+      children: [
+        TopNavBar(),
+        Positioned(
+          bottom: 100,
+          right: 16,
+          child: SideButtons(),
+        ),
+      ],
+    ),
       bottomNavigationBar: Padding(padding: const EdgeInsets.only(bottom: 20), 
       child: BottomNavBar()),
       
