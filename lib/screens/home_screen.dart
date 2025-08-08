@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
       children: [
         TopNavBar(),
         Positioned(
-          top: 500,
+          bottom: 50,
           right: 16,
           child: SideButtons(),
         ),

@@ -7,8 +7,8 @@ class TopNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(top: 50, left: 35, right: 35),
-      height: 2000,
-      width: 360,
+      height: MediaQuery.of(context).size.height,
+      width: MediaQuery.of(context).size.width,
       color: Colors.transparent,
       child: Stack(
         children: [
