@@ -3,8 +3,7 @@ import 'screens/home_screen.dart';
 // import 'package:device_preview/device_preview.dart';
 
 void main() {
-  runApp(MyApp(),
-  );
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

@@ -5,16 +5,18 @@ class TopNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
+    return Container(
+      margin: const EdgeInsets.only(top: 50, left: 35, right: 35),
+      height: 2000,
+      width: 360,
+      color: Colors.transparent,
+      child: Stack(
         children: [
-          Positioned(
-            top: 62,
-            left: 36,
-            right: 36,
-            child: Expanded(
-              child: SizedBox(
-                height: 40,
-                child: SearchBar(
+          Padding(
+            padding: const EdgeInsets.only(top: 10.0, right: 2),
+            child: SizedBox(
+              height: 40,
+              child: SearchBar(
                 hintText: 'Ask me anything',
                 backgroundColor: MaterialStateProperty.all(Color(0xFF0F3966).withOpacity(0.8)),
                 textStyle: MaterialStateProperty.all(const TextStyle(color: Colors.white)),
@@ -22,33 +24,34 @@ class TopNavBar extends StatelessWidget {
                 elevation: MaterialStateProperty.all(0),
                 leading: Padding(
                   padding: const EdgeInsets.only(right: 40.0),
-                  child: DrawerButton(
-                            color: Colors.white,
-                            onPressed: () {
-                              Scaffold.of(context).openDrawer();
-                            },
-                          ),
+                  child: IconButton(
+                    icon: Icon(Icons.menu, color: Colors.white),
+                    onPressed: () {
+                      Scaffold.of(context).openDrawer();
+                    },
+                  ),
                 ),
               ),
-              ),
             ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Container(
+                margin: const EdgeInsets.only(top: 4),
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Colors.white, width: 1.5),
+                ),
+                child: CircleAvatar(
+                  radius: 26,
+                  backgroundColor: Colors.black,
+                ),
               ),
-          Positioned(
-                top: 55,
-                left: 290,
-                right: 0,
-                child: Container(
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(color: Colors.white, width: 1.5),
-                  ),
-                  child: CircleAvatar(
-                    radius: 25,
-                    backgroundColor: Colors.black,
-                  ),
-                )
-              ),
-        ],
+            ],
+          )
+        ]
+      ),
     );
 }
 }
