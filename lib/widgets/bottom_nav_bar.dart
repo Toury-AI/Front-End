@@ -9,14 +9,14 @@ class BottomNavBar extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(30),
       child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+        filter: ImageFilter.blur(),
         child: Container(
           margin: EdgeInsets.symmetric(horizontal: 60, vertical: 15), // outside of box spacing
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10), //inside
           decoration: BoxDecoration(
-            color:Colors.grey[300],
+            color:Colors.white.withAlpha(200),
             borderRadius: BorderRadius.circular(30),
-            border: Border.all(color: Colors.grey.withAlpha(77),width: 1),
+            border: Border.all(color: Colors.white,width: 1),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
